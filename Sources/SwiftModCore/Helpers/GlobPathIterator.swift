@@ -72,6 +72,7 @@ private final class RecursiveGlobPathIterator: IteratorProtocol {
             return path
         }
         else if let path = directoryIterator?.next() {
+            print("NEXT: ", path.pathString)
             return resolved(path: path)
         }
         else {
